@@ -24,7 +24,11 @@ public class MainActivity extends AppCompatActivity {
                 EditText eTResultado = (EditText) findViewById(R.id.editTextNumberResultado);
                 double aux;
                 aux = Double.valueOf(etValor.getText().toString());
-                valor = valor + aux;
+                if(valor == 0.0){
+                    valor = aux;
+                }else{
+                    valor = valor + aux;
+                }
                 etValor.getText().clear();
                 eTResultado.setText(String.valueOf(valor));
             }
@@ -37,7 +41,11 @@ public class MainActivity extends AppCompatActivity {
                 EditText eTResultado = (EditText) findViewById(R.id.editTextNumberResultado);
                 double aux;
                 aux = Double.valueOf(etValor.getText().toString());
-                valor = valor - aux;
+                if(valor == 0.0){
+                    valor = aux;
+                }else{
+                    valor = valor - aux;
+                }
                 etValor.getText().clear();
                 eTResultado.setText(String.valueOf(valor));
             }
@@ -50,7 +58,11 @@ public class MainActivity extends AppCompatActivity {
                 EditText eTResultado = (EditText) findViewById(R.id.editTextNumberResultado);
                 double aux;
                 aux = Double.valueOf(etValor.getText().toString());
-                valor = valor / aux;
+                if(valor == 0.0){
+                    valor = aux;
+                }else{
+                    valor = valor / aux;
+                }
                 etValor.getText().clear();
                 eTResultado.setText(String.valueOf(valor));
             }
@@ -63,7 +75,11 @@ public class MainActivity extends AppCompatActivity {
                 EditText eTResultado = (EditText) findViewById(R.id.editTextNumberResultado);
                 double aux;
                 aux = Double.valueOf(etValor.getText().toString());
-                valor = valor * aux;
+                if(valor == 0.0){
+                    valor = aux;
+                }else{
+                    valor = valor * aux;
+                }
                 etValor.getText().clear();
                 eTResultado.setText(String.valueOf(valor));
             }
